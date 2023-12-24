@@ -21,7 +21,7 @@ if button:
     girl = list(G.lower())
 
     while ' ' in boy:  # removing all the empty spaces
-    boy.pop(boy.index(' '))
+        boy.pop(boy.index(' '))
     while ' ' in girl:
         girl.pop(girl.index(' '))
 
