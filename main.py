@@ -26,8 +26,8 @@ if button:
         girl.pop(girl.index(' '))
     for i in range(len(boy)-1,-1,-1):                               
         if boy[i] in girl:
-        girl.pop(girl.index(boy[i]))
-        boy.pop(i)
+         girl.pop(girl.index(boy[i]))
+         boy.pop(i)
     num = len(boy + girl)
     flames = ['F', 'L', 'A', 'M', 'E', 'S']
     a = 0
