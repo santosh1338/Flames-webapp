@@ -20,10 +20,10 @@ if button:
     boy = list(B.lower())
     girl = list(G.lower())
 
-    file_local = open(names.txt, 'r').readlines()
+    file_local = open('names.txt', 'r').readlines()
     file_local += f'{boy},{girl}' + '\n'
 
-    with open(names.txt, 'w') as file1:
+    with open('names.txt', 'w') as file1:
         file1.writelines(file_local)
 
     while ' ' in boy:  # removing all the empty spaces
