@@ -1,7 +1,6 @@
 import streamlit as st
 import time
 
-
 st.title('FLAMES')
 st.subheader("Unveil the relationship with just the names!!")
 
@@ -18,8 +17,6 @@ if button:
     B = st.session_state["1st"]
     G = st.session_state["2nd"]
 
-
-
     boy = list(B.lower())
     girl = list(G.lower())
 
@@ -27,10 +24,10 @@ if button:
         boy.pop(boy.index(' '))
     while ' ' in girl:
         girl.pop(girl.index(' '))
-    for i in boy:
-        if i in girl:
-            boy.pop(boy.index(i))
-            girl.pop(girl.index(i))
+    for i in range(len(boy)-1,-1,-1):                               
+        if boy[i] in girl:
+        girl.pop(girl.index(boy[i]))
+        boy.pop(i)
     num = len(boy + girl)
     flames = ['F', 'L', 'A', 'M', 'E', 'S']
     a = 0
